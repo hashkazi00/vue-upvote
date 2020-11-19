@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css"
+    />
+    <link rel="stylesheet" href="../public/styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <h2 class="title has-text-centered dividing-header">UpVote!</h2>
+
+      <div class="section has-text-centered">
+        <div class="columns">
+          <div class="column" v-for="submission in sortedSubmissions">
+            <card-component
+              :submission="submission"
+              :submissions="sortedSubmissions"
+              @delete-entry="deleteEntry"
+            ></card-component>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./seed.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
