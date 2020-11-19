@@ -21,7 +21,8 @@ const cardComponent = {
                     href="#"
                     class="card-footer-item"
 
-                    <!-- Note that we have used kebab case, mainly due to vue naming  conventions and secondly due to the fact that browser itself cannot differentiate between the fact that "myEvent" and "myevent" are diiferent -->
+                    
+
                     @click="$emit('delete-entry', submission.id)"
                     >Delete</a
                   >
